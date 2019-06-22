@@ -1,20 +1,20 @@
 ocAdmin='admin'
 ocPassword='password'
 alamedaNamespace='alameda'
-caseName='alameda-0622-1-tomcat'
+caseName='alameda-0622-1'
 alameExecutor='component=alameda-executor'
 alamedaRecommender='component=alameda-alameda-recommender'
-appNanespace='tomcat'
-appDeployconfig='app=tomcat'
+appNanespace='nginx'
+appDeployconfig='name=nginx-example'
 appApiversion='apps.openshift.io/v1'
 maxReplicas=100
 cpuPercent=80
 memPercent=50
 cpuLimit=200
 appType="deploymentconfig"
-memoryLimit=128
-trafficRatio=20
-warmUp=2
+memoryLimit=0
+trafficRatio=4000
+warmUp=10
 pictureXaxis=144
 pictureYratio=1.5
 
@@ -22,6 +22,7 @@ pictureYratio=1.5
 ##############################################
 ##                                          ##
 ##    Set up define.py                      ##
+##    DON'T change                          ##
 ##                                          ##
 ##############################################
 sleepTime=$[warmUp*60-10]
