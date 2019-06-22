@@ -37,7 +37,7 @@ echo ' '
 echo "# config HPA memory yaml"
 export appNanespace appDeployconfig maxReplicas memPercent appType app
 envsubst < k8shpa_mem > k8shpa_mem.yaml
-export appNanespace appDeployconfig maxReplicas memPercent appType app
+unset appNanespace appDeployconfig maxReplicas memPercent appType app
 
 # enable k8s autoscaler on memory
 echo ' '
