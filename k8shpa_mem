@@ -1,0 +1,17 @@
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: ${app}
+  namespace: ${appNanespace}
+spec:
+  scaleTargetRef:
+    apiVersion: ${appApiversion}
+    kind: ${appType}
+    name: ${app}
+  minReplicas: 1
+  maxReplicas: ${maxReplicas}
+  metrics:
+  - type: Resource
+    resource:
+      name: memory
+      targetAverageUtilization: ${memPercent}
